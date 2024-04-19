@@ -55,3 +55,6 @@ Personel ekranında Otel yönetimi, oda yönetimi, dönem yönetimi ve rezervasy
 <br>
 ![5](https://github.com/atmacasoftware/turizmAcenteSistemi/assets/94282227/918cd891-c990-46dd-9bbf-32e6e3c79774)
 <br>
+
+### Tanıtım Videosu
+https://drive.google.com/file/d/19FjbARjMRHoed1-OYzbLyZOxp9SgjV2a/view?usp=drive_link
