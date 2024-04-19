@@ -30,5 +30,5 @@ Giriş ekranında giriş yapılabilmesi için `user` veritabanına kayıtlı `em
 Admin ise AdminView ekranına gitmekte eğer Personel ise PersonelView ekranına gitmektedir.
 Aşağıda giriş ekranını ekran görüntüsü verilmiştir.
 
-<img src="C:\Users\atmac\OneDrive\Masaüstü\Patika\turizmAcenteSistemi\screenfolder\1.jpg">
+<img src="..\turizmAcenteSistemi\screenfolder\1.jpg">
 
