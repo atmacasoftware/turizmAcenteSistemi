@@ -24,7 +24,7 @@ public class PersonelView extends Layout{
         this.user = user;
         guiInitilaze(1200, 750, "Turizm Acente Sistemi");
 
-        //this.lbl_welcome.setText(user.getFirst_name() + " " + user.getLast_name());
+        this.lbl_welcome.setText("Hoşgeldiniz " + user.getFirst_name() + " " + user.getLast_name());
 
         btn_logout.addActionListener(e -> { // Giriş ekranına yönlendirme
             LoginView loginView = new LoginView();
@@ -48,6 +48,11 @@ public class PersonelView extends Layout{
 
         btn_rezervasyon.addActionListener(e -> {
             ReservationView reservationView = new ReservationView(user);
+            dispose();
+        });
+
+        btn_logout.addActionListener(e -> {
+            LoginView loginView = new LoginView();
             dispose();
         });
     }

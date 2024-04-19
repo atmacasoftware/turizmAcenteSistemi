@@ -13,8 +13,7 @@ public class App {
         Helper.setTheme();
         Connection con = Database.getInstance();
 
-        //LoginView loginView = new LoginView();
-        PersonelView personelView = new PersonelView(new User());
+        LoginView loginView = new LoginView();
         UserManager userManager = new UserManager();
     }
 }
