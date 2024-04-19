@@ -32,5 +32,3 @@ Aşağıda giriş ekranını ekran görüntüsü verilmiştir.
 
 <img src="C:\Users\atmac\OneDrive\Masaüstü\Patika\turizmAcenteSistemi\screenfolder\1.jpg">
 
-
-
