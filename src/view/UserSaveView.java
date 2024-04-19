@@ -41,6 +41,12 @@ public class UserSaveView extends Layout {
             fld_email.setText(user.getEmail());
             fld_mobilephone.setText(user.getMobile_phone());
             fld_password.setText(user.getPassword());
+
+            if (user.getRole() == User.Role.ADMIN) {
+                radio_admin.setSelected(true);
+            } else {
+                radio_personel.setSelected(true);
+            }
         }
 
 
@@ -62,12 +68,12 @@ public class UserSaveView extends Layout {
             } else {
 
                 if (user == null) { // Yeni kullanıcı ekleme
-                    userManager.save(new User(fld_firstname.getText(),fld_lastname.getText(),fld_email.getText(),fld_mobilephone.getText(),fld_password.getText(), LocalDate.parse(currentDate), LocalDate.parse(currentDate),
-                    this.radio_admin.isSelected() ? User.Role.ADMIN : User.Role.PERSONEL));
+                    userManager.save(new User(fld_firstname.getText(), fld_lastname.getText(), fld_email.getText(), fld_mobilephone.getText(), fld_password.getText(), LocalDate.parse(currentDate), LocalDate.parse(currentDate),
+                            this.radio_admin.isSelected() ? User.Role.ADMIN : User.Role.PERSONEL));
                     Helper.showMsg("done");
                     dispose();
 
-                } else{ // Kullanıcı güncelleme
+                } else { // Kullanıcı güncelleme
                     user.setFirst_name(fld_firstname.getText());
                     user.setLast_name(fld_lastname.getText());
                     user.setEmail(fld_email.getText());
@@ -77,7 +83,7 @@ public class UserSaveView extends Layout {
 
                     if (this.radio_admin.isSelected()) {
                         user.setRole(User.Role.ADMIN);
-                    }else{
+                    } else {
                         user.setRole(User.Role.PERSONEL);
                     }
 
