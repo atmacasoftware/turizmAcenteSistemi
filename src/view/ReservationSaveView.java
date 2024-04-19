@@ -1,12 +1,10 @@
 package view;
 
 import business.FeaturesManager;
-import business.OtelManager;
 import business.ReservationManager;
 import business.RoomManager;
 import core.Helper;
 import entity.Features;
-import entity.Otel;
 import entity.Reservation;
 import entity.Room;
 
@@ -61,7 +59,7 @@ public class ReservationSaveView extends Layout {
     private JLabel lbl_totalPrice;
     private JButton btn_calcPrice;
     private JButton btn_save;
-    private JButton iptalEtButton;
+    private JButton btn_cancel;
     private JLabel lbl_status;
     private JComboBox cmb_status;
     private JLabel lbl_enterDate;
@@ -227,6 +225,10 @@ public class ReservationSaveView extends Layout {
                     }
                 }
             }
+        });
+
+        btn_cancel.addActionListener(e -> {
+            dispose();
         });
     }
 
