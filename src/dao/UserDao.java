@@ -100,21 +100,16 @@ public class UserDao {
     public boolean update(User user) {
         String query = "UPDATE public.user SET first_name = ?, last_name = ?, email = ?, mobile_phone = ?, password = ?, role = ?, updated_at = ? WHERE id = ?";
         try {
-            if (isCheckEmail(user.getEmail())) {
-                Helper.showMsg("uniqError");
-                return false;
-            } else {
-                preparedStatement = this.con.prepareStatement(query);
-                preparedStatement.setString(1, user.getFirst_name());
-                preparedStatement.setString(2, user.getLast_name());
-                preparedStatement.setString(3, user.getEmail());
-                preparedStatement.setString(4, user.getMobile_phone());
-                preparedStatement.setString(5, user.getPassword());
-                preparedStatement.setString(6, user.getRole().toString());
-                preparedStatement.setDate(7, Date.valueOf(user.getUpdated_at()));
-                preparedStatement.setInt(8, user.getUser_id());
-                return preparedStatement.executeUpdate() != 1;
-            }
+            preparedStatement = this.con.prepareStatement(query);
+            preparedStatement.setString(1, user.getFirst_name());
+            preparedStatement.setString(2, user.getLast_name());
+            preparedStatement.setString(3, user.getEmail());
+            preparedStatement.setString(4, user.getMobile_phone());
+            preparedStatement.setString(5, user.getPassword());
+            preparedStatement.setString(6, user.getRole().toString());
+            preparedStatement.setDate(7, Date.valueOf(user.getUpdated_at()));
+            preparedStatement.setInt(8, user.getUser_id());
+            return preparedStatement.executeUpdate() != 1;
 
         } catch (SQLException e) {
             throw new RuntimeException(e);
